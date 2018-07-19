@@ -227,6 +227,7 @@ struct dsi_panel {
 	int naive_display_loading_effect_mode;
 	int naive_display_customer_srgb_mode;
 	int naive_display_customer_p3_mode;
+	int hbm_los_mode;
 	int status_value;
 	int panel_mismatch_check;
 	int panel_mismatch;
@@ -306,6 +307,8 @@ int dsi_panel_get_dfps_caps(struct dsi_panel *panel,
 			    struct dsi_dfps_capabilities *dfps_caps);
 
 int dsi_panel_apply_display_mode(struct dsi_panel *panel);
+
+int dsi_panel_apply_hbm_mode(struct dsi_panel *panel);
 
 int dsi_panel_pre_prepare(struct dsi_panel *panel);
 
